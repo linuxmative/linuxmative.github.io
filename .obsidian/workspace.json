@@ -140,15 +140,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "blog/uStandard — Custom Ubuntu-Based Live ISO Builder.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура"
+              "title": "Структура uStandard — Custom Ubuntu-Based Live ISO Builder"
+            }
+          },
+          {
+            "id": "e92013b1a1607b94",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -170,13 +182,14 @@
   },
   "active": "d5c7108da8718dfc",
   "lastOpenFiles": [
+    "index.md",
+    "Пустой документ",
     "blog/uMini - A Minimal Ubuntu-based Live ISO Builder.md",
     "blog/uStandard — Custom Ubuntu-Based Live ISO Builder.md",
     "kit",
     "Папка",
     "kitrc.md",
     "downloads",
-    "Пустой документ",
     "README.md",
     "blog",
     "assets"

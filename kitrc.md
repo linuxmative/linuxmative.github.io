@@ -3,12 +3,17 @@
 # 📂 Vault: исходные Markdown-файлы
 
 vault:
-  kit_folder: ./kit
+  kit_folder: kit
   include: 
-    - '^(kitrc|index|navbar).md$'
+    - '^index.md$'
+    - '^navbar.md$'
     - '^blog/'
     - '^notes/'
+    - '^assets/'
+    - '^downloads/'
   exclude: 
+    - '^kitrc.md$'
+    - '^kitrc.json$'
     - '^kit/'
     - '^templates/'
     - '^blog/draft'
@@ -24,14 +29,14 @@ kit:
 site:
   id: linuxmative
   name: LinuxMative
-  description: "Официальный сайт проекта LinuxMative — минимальные системы Ubuntu, кастомизация и сборка ISO"
+  description: "Официальный сайт проекта LinuxMative"
   url: "https://linuxmative.github.io"
   keywords: ["linux", "ubuntu", "custom iso", "live cd", "minimal linux"]
 
 # 🖼️ OG image
 
 og:
-  image: https://linuxmative.github.io/assets/og-image.png
+  image: https://avatars.githubusercontent.com/u/143880431?s=200&v=4
 
 # 🔌 Plugins
 

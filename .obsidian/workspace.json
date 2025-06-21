@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "ada27af3176c54cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0a5add109c88154",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5c7108da8718dfc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/uStandard — Custom Ubuntu-Based Live ISO Builder.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "uStandard — Custom Ubuntu-Based Live ISO Builder"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "842eb7c63bc7ee1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac05d07a234d8a78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc65eda9cb889929",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "7ec426ebb9808a74",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "1358000bef673cde",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5d025df5525f45ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "d41e74e3cb97e211",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6391af956861e94f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки"
+            }
+          },
+          {
+            "id": "b01b642ae592613b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки"
+            }
+          },
+          {
+            "id": "b7610f28ed7149e1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "86e26c06ef3f4849",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "github-sync:Sync with Remote": false,
+      "obsidian-kit:PublishKit": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "d5c7108da8718dfc",
+  "lastOpenFiles": [
+    "blog/uMini - A Minimal Ubuntu-based Live ISO Builder.md",
+    "blog/uStandard — Custom Ubuntu-Based Live ISO Builder.md",
+    "kitrc.md",
+    "downloads",
+    "Папка",
+    "Пустой документ",
+    "README.md",
+    "blog",
+    "assets"
+  ]
+}

@@ -5,8 +5,7 @@
 vault:
   kit_folder: kit
   include: 
-    - '^index.md$'
-    - '^navbar.md$'
+    - '^(kitrc|index|navbar).md$'
     - '^blog/'
     - '^notes/'
     - '^assets/'

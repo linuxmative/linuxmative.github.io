@@ -3,3 +3,21 @@ layout: home
 title: Blog
 subtitle: Linux Mative is your friendly gateway to the world of Linux — whether you’re a beginner exploring your first distribution, a power user seeking tips and tutorials, or a developer interested in open source projects.
 ---
+
+<!-- Start search-->
+<!-- Html Elements for Search -->
+    <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <ul id="results-container"></ul>
+    </div>
+<!-- Script pointing to search-script.js -->
+    <script src="/assets/js/search-script.js" type="text/javascript"></script>
+<!-- Configuration -->
+    <script>
+    SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+    })
+    </script>
+<!-- End-search -->

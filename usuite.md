@@ -1,0 +1,5 @@
+---
+layout: page
+title: uStandard
+subtitle: Linux Mative is your friendly gateway to the world of Linux — whether you’re a beginner exploring your first distribution, a power user seeking tips and tutorials, or a developer interested in open source projects.
+---

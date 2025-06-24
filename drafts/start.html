@@ -1,0 +1,360 @@
+---
+layout: page
+title: Welcome to Linux Mative
+subtitle: Linux Mative is your friendly gateway to the world of Linux — whether you’re a beginner exploring your first distribution, a power user seeking tips and tutorials, or a developer interested in open source projects.
+---
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .main-explain-area {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(1rem, 4vw, 3rem);
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Welcome section */
+        .welcome-section {
+            margin-bottom: clamp(2rem, 5vw, 3rem);
+        }
+
+        .welcome-section p {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .features-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .features-list li:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Buttons section */
+        .buttons-section {
+            text-align: center;
+            margin: clamp(2rem, 5vw, 3rem) 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+            margin: 0.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Support section */
+        .support-section {
+            text-align: center;
+            margin: clamp(2rem, 4vw, 3rem) 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+        }
+
+        .support-section p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin-bottom: 1rem;
+        }
+
+        .created-by {
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* Divider */
+        .divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #dee2e6, transparent);
+            margin: clamp(2rem, 5vw, 3rem) 0;
+        }
+
+        /* Section titles */
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin: clamp(2rem, 5vw, 3rem) 0 clamp(1.5rem, 4vw, 2rem) 0;
+        }
+
+        /* Projects grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: clamp(2rem, 5vw, 3rem);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #e9ecef;
+        }
+
+        .project-content {
+            padding: clamp(1rem, 3vw, 1.5rem);
+        }
+
+        .project-title {
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Features section */
+        .features-section {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: 12px;
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+        }
+
+        .features-section p {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .features-section ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .features-section li {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin-bottom: 0.8rem;
+        }
+
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-style: italic;
+        }
+
+        /* Links styling */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-explain-area {
+                margin: 1rem;
+                border-radius: 8px;
+            }
+            
+            .logo-title {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                display: block;
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-explain-area">
+        <!-- Header section -->
+        <div class="header-section">
+            <div class="logo-title">
+                <img src="/assets/img/avatar-icon.png" alt="Linux Mative Logo" class="avatar-img">
+                <h1>linuxmative</h1>
+            </div>
+        </div>
+
+        <!-- Welcome section -->
+        <section class="welcome-section">
+            <p><strong>Linux Mative</strong> is a lightweight and flexible Ubuntu-based operating system designed for users who want full control over their system — starting from the terminal.</p>
+
+            <p>Out of the box, it includes only the essential core components needed to boot and run. There's no preinstalled desktop environment, no unnecessary packages — just a clean, functional base.</p>
+
+            <p><strong>Start from the ground up.</strong> Begin with the terminal and build your own Linux environment from scratch — with the tools, apps, and interface <em>you</em> choose.</p>
+
+            <p>Whether you're a developer, minimalist, or distro builder, <strong>Linux Mative</strong> provides a stable, bloat-free foundation tailored for customization.</p>
+
+            <ul class="features-list">
+                <li>⚙️ Minimal by design</li>
+                <li>🧩 Fully customizable</li>
+                <li>🚀 Continuous updates</li>
+                <li>📦 Powered by Ubuntu repositories</li>
+            </ul>
+
+            <p><strong>Build your system, your way — with Linux Mative.</strong></p>
+        </section>
+
+        <!-- Buttons section -->
+        <div class="buttons-section">
+            <a class="btn btn-success" href="https://github.com/daattali/beautiful-jekyll#readme">Get Started</a>
+            <a class="btn btn-primary" href="/plans">Compare Plans</a>
+        </div>
+
+        <!-- Support section -->
+        <div class="support-section">
+            <p>Built to deliver a clean and responsive experience across all devices — from desktops to smartphones.</p>
+            <p>If you find Linux Mative useful, consider <a href="https://www.paypal.com/donate/?hosted_button_id=8P43MJQ2TM7S2">supporting the project</a> ❤ Every contribution helps keep it open and growing.</p>
+            <div class="created-by">Created with passion by <a href="https://github.com/titenko">Maksym Titenko</a></div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Projects section -->
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="/assets/img/umini.png" alt="uMini" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">uMini</h3>
+                    <div class="project-description">
+                        <p>uMini is a minimalist live ISO image built from the ground up using official Ubuntu repositories.<br>
+                        This project provides a script that assembles a bootable ISO image suitable for legacy BIOS and UEFI systems, with a text-based autologin session and basic network tools preinstalled.</p>
+                    </div>
+                    <a href="/umini" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="/assets/img/ustandard.png" alt="uStandard" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">uStandard</h3>
+                    <div class="project-description">
+                        <p>uStandard is a script for creating a customizable Live ISO based on Ubuntu. It provides a minimal yet fully usable system with drivers, X11, Wi-Fi, multimedia, auto-login, and the ability to install any desktop environment (GNOME, KDE, XFCE, etc.).<br>
+                        This project builds upon the foundation of uMini, offering a more complete and installation-ready system with all essential components included.</p>
+                    </div>
+                    <a href="/ustandard" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="/assets/img/usuite.png" alt="uSuite" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">uSuite</h3>
+                    <div class="project-description">
+                        <p>Coming soon...<br>Currently in development</p>
+                    </div>
+                    <a href="/minimal-mistakes/docs/license/" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features section -->
+        <h2 class="section-title">Features</h2>
+
+        <section class="features-section">
+            <p><strong>Linux Mative</strong> is a lightweight and fully functional Ubuntu-based LiveCD that includes only the essential components required to boot and operate a Linux system. It's designed as a clean and minimal starting point for power users, developers, and enthusiasts who want complete control over their system from the very beginning.</p>
+            
+            <p>Unlike standard Ubuntu ISOs that come bundled with a wide range of preinstalled applications, Mative Linux provides just the core tools needed to run a working Linux environment — leaving you free to decide what to add next.</p>
+            
+            <p>With Linux Mative, you can:</p>
+            <ul>
+                <li>Boot into a minimal live environment with networking support and essential drivers.</li>
+                <li>Remaster the ISO using tools like <strong>Cubic</strong>, <strong>Ubuntu Customization Kit</strong>, or <strong>Reconstructor</strong> to tailor the system to your specific needs.</li>
+                <li>Build your own personalized Ubuntu-based distribution with custom software, configurations, and user experience.</li>
+                <li>Use it as a starting point for learning system internals, testing packages, or developing lightweight Linux variants.</li>
+            </ul>
+            
+            <p>Whether you're building a rescue disk, a development platform, or your own Ubuntu remix, Linux Mative provides a stable, clean base — free from bloat, and full of potential.</p>
+            
+            <div class="disclaimer">
+                <strong>Note:</strong> Linux Mative is an independent community-driven project. It is not affiliated with or endorsed by Canonical Ltd., the developers of Ubuntu. Ubuntu is a registered trademark of Canonical Ltd., and Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.
+            </div>
+        </section>
+    </div>
+

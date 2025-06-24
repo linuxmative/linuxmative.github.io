@@ -182,6 +182,12 @@
   },
   "active": "d5c7108da8718dfc",
   "lastOpenFiles": [
+    "_site/drafts/beautiful-jekyll-theme.gemspec",
+    "_site/drafts/Gemfile.lock",
+    "_site/drafts/Gemfile",
+    "drafts/Gemfile.lock",
+    "drafts/Gemfile",
+    "drafts/beautiful-jekyll-theme.gemspec",
     "_site/drafts/2020-02-28-test-markdown/index.html",
     "_site/drafts/2020-02-28-test-markdown",
     "_site/drafts/2020-02-26-flake-it-till-you-make-it/index.html",
@@ -196,16 +202,10 @@
     "privacy-policy.md",
     "CHANGELOG.md",
     "kit/kitdb.json",
-    "kit/index.html",
     "index.md",
-    "Пустой документ",
     "blog/uMini - A Minimal Ubuntu-based Live ISO Builder.md",
     "blog/uStandard — Custom Ubuntu-Based Live ISO Builder.md",
-    "kit",
-    "Папка",
     "kitrc.md",
-    "downloads",
-    "README.md",
-    "blog"
+    "README.md"
   ]
 }

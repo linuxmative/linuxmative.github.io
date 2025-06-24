@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "usuite.md",
+                "file": "_posts/Welcome to Linux Mative.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "usuite"
+              "title": "Welcome to Linux Mative"
             }
           }
         ]
@@ -182,28 +182,29 @@
   },
   "active": "d5c7108da8718dfc",
   "lastOpenFiles": [
+    "umini.md",
+    "_posts/Welcome to Linux Mative.md",
+    "drafts/2020-02-28-test-markdown.md",
+    "_site/drafts/2020-02-28-test-markdown/index.html",
+    "_site/drafts/2020-02-28-test-markdown",
+    "_site/2020-02-28-test-markdown/index.html",
+    "_site/2020-02-28-test-markdown",
+    "usuite.md",
+    "_site/search/index.html",
+    "_site/search",
+    "_site/search.html",
+    "search.html",
+    "_site/Пустой документ",
+    "Пустой документ",
     "_site/assets/img/404.png",
     "assets/img/404.png",
     "_site/assets/img/404-Photoroom.png",
     "assets/img/404-Photoroom.png",
-    "Gemfile.lock",
-    "_site/beautiful-jekyll-theme.gemspec",
-    "beautiful-jekyll-theme.gemspec",
-    "Gemfile",
     "_site/assets/img/404.jpg",
     "assets/img/404.jpg",
-    "_site/drafts/beautiful-jekyll-theme.gemspec",
-    "_site/drafts/Gemfile.lock",
-    "_site/drafts/Gemfile",
-    "drafts/Gemfile.lock",
-    "drafts/Gemfile",
-    "drafts/beautiful-jekyll-theme.gemspec",
     "_posts/2020-02-26-flake-it-till-you-make-it.md",
-    "drafts/2020-02-28-test-markdown.md",
     "drafts/2020-02-26-flake-it-till-you-make-it.md",
-    "usuite.md",
     "ustandard.md",
-    "umini.md",
     "terms-of-service.md",
     "privacy-policy.md",
     "CHANGELOG.md",

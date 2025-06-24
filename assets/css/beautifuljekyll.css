@@ -1371,18 +1371,60 @@ a.btn.btn--primary:hover {
             margin: clamp(2rem, 5vw, 3rem) 0;
         }
 
+/* Контейнер с рамкой */
 #search-container {
-        max-width: 40em;
-        padding: 1em;
-        margin: 1em auto;
-        border: 1px solid lightgrey;
-      }
-      #search-input {
-        display: inline-block;
-        padding: .5em;
-        width: 100%;
-        font-size: 0.8em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
+  max-width: 100%;
+  padding: 1em;
+  margin: 1em auto;
+  border: 1px solid lightgrey;
+}
+
+/* Обёртка иконка + input */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Поле ввода с отступом под иконку */
+#search-input {
+  width: 100%;
+  padding: 0.5em 0.75em 0.5em 2.2em; /* слева отступ под иконку */
+  font-size: 1em;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Иконка лупы */
+.search-wrapper .fa-search {
+  position: absolute;
+  top: 50%;
+  left: 0.75em;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1em;
+  pointer-events: none;
+}
+
+/* Результаты поиска */
+#results-container {
+  list-style: none;
+  margin-top: 1em;
+  padding-left: 0;
+
+  border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#results-container li {
+  padding: 0.5em 1em;
+
+}
+
+#results-container li:hover {
+
+  cursor: pointer;
+}

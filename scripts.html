@@ -1,5 +1,26 @@
 ---
 layout: scripts
 title: Scripts
-subtitle: Linux Mative is your friendly gateway to the world of Linux — whether you’re a beginner exploring your first distribution, a power user seeking tips and tutorials, or a developer interested in open source projects.
+subtitle: Scripts from the Mative
 ---
+
+<!-- Start search-->
+<!-- Html Elements for Search -->
+<div id="search-container">
+  <div class="search-wrapper">
+    <i class="fa fa-search"></i>
+    <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+  </div>
+  <ul id="results-container"></ul>
+</div>
+
+<script src="/assets/js/search-script.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/assets/js/search.json'
+  });
+</script>
+<!-- End-search -->
+<hr class="divider">

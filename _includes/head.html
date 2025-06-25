@@ -105,7 +105,8 @@
 
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-
+  <meta name="keywords" content="Linux, Ubuntu, minimal Linux, custom ISO, uMini, uStandard, open source, lightweight Linux, terminal based Linux">
+  <meta property="og:locale" content="en_US">
   {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
   {% endif %}
@@ -145,9 +146,11 @@
   {% if site.darkmode.toggle %}
   <link rel="stylesheet" href="/assets/css/skin-switch.css">
   {% endif %}  
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1a1a1a">   
   
-  <link rel="stylesheet" href="/assets/css/demo.css">
-     
   {% if page.head-extra %}
     {% for file in page.head-extra %}
       {% include {{ file }} %}

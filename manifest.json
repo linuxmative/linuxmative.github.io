@@ -1,0 +1,16 @@
+{
+  "name": "Linux Mative",
+  "short_name": "LinuxMative",
+  "start_url": "/",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/assets/img/avatar-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

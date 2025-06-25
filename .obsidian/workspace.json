@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-06-24-Welcome-to-Linux-Mative.md",
+                "file": "_posts/2025-06-24-Two-Ways-to-Start-with-Linux-Mative.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-24-Welcome-to-Linux-Mative"
+              "title": "2025-06-24-Two-Ways-to-Start-with-Linux-Mative"
             }
           }
         ]
@@ -176,12 +176,14 @@
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
       "github-sync:Sync with Remote": false,
-      "obsidian-kit:PublishKit": false,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "d5c7108da8718dfc",
   "lastOpenFiles": [
+    "Без названия.md",
+    "_posts/2025-06-24-Two-Ways-to-Start-with-Linux-Mative.md",
+    "_posts/2025-06-24-Welcome-to-Linux-Mative.md",
     "_site/assets/js/search.json",
     "assets/js/search.json",
     "drafts/2020-02-26-flake-it-till-you-make-it.md",
@@ -189,7 +191,6 @@
     "_site/2025-06-24-Welcome-to-Linux-Mative/index.html",
     "_site/2025-06-24-Welcome-to-Linux-Mative",
     "_posts/Welcome to Linux Mative.md",
-    "_posts/2025-06-24-Welcome-to-Linux-Mative.md",
     "drafts/2020-02-28-test-markdown.md",
     "_site/drafts/2020-02-28-test-markdown/index.html",
     "_site/drafts/2020-02-28-test-markdown",
@@ -198,7 +199,6 @@
     "usuite.md",
     "_site/search/index.html",
     "_site/search",
-    "_site/search.html",
     "_site/assets/img/404.png",
     "assets/img/404.png",
     "_site/assets/img/404-Photoroom.png",

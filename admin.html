@@ -8,26 +8,3 @@ subtitle: Admin Dashboard
 <script async src="https://plausible.io/js/embed.host.js"></script>
 
 <hr class="divider">
-
-<div id="plausible-dashboard-container" style="width: 100%; height: 1600px;"></div>
-
-<script>
-  (function() {
-    const container = document.getElementById('plausible-dashboard-container');
-    if (!container) return;
-
-    const iframe = document.createElement('iframe');
-    iframe.setAttribute('plausible-embed', '');
-    iframe.src = 'https://plausible.io/share/linuxmative.github.io?auth=dqQxCsJ3ZwcxPAGdFrnhO&embed=true&theme=dark';
-    iframe.scrolling = 'no';
-    iframe.frameBorder = '0';
-    iframe.loading = 'lazy';
-    iframe.style.width = '1px';
-    iframe.style.minWidth = '100%';
-    iframe.style.height = '1600px';
-
-    container.appendChild(iframe);
-  })();
-</script>
-
-<script async defer src="https://plausible.io/js/embed.host.js"></script>

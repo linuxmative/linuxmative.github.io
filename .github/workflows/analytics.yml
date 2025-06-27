@@ -33,4 +33,3 @@ jobs:
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
     env:
       PAYLOAD: ${{ toJson(github.event.client_payload) }}
-

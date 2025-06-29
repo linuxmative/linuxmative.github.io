@@ -45,4 +45,11 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<script src="/assets/js/analytics.js"></script>
+<script>
+var script = document.createElement('script');
+script.defer = true;
+script.dataset.domain = "linuxmative.github.io";
+script.dataset.api = "https://plausible.io/api/event";
+script.src = "https://plausible.io/js/script.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>

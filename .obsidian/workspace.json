@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_scripts/2025-06-24-Script.md",
+                "file": "_posts/2025-06-29-Update-Formation-Workflow-in-uMini-uStandard-and-uSuite-Projects.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-24-Script"
+              "title": "2025-06-29-Update-Formation-Workflow-in-uMini-uStandard-and-uSuite-Projects"
             }
           }
         ]
@@ -179,8 +179,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc65eda9cb889929",
+  "active": "d5c7108da8718dfc",
   "lastOpenFiles": [
+    "_posts/2025-06-24-Two-Ways-to-Start-with-Linux-Mative.md",
+    "_posts/2025-06-24-Welcome-to-Linux-Mative.md",
+    "_posts/2025-06-29-Update-Formation-Workflow-in-uMini-uStandard-and-uSuite-Projects.md",
+    "_posts/2025-06-29-Update-Formation-Workflow-in-uMini-uStandard-and-uSuite-Projects.md",
+    "_scripts/2025-06-24-Script.md",
+    "google0a2499932fb6a53e.html",
+    "admin.html",
     "_site/Пустой документ",
     "Пустой документ",
     "_site/assets/js/analytics.js",
@@ -193,15 +200,9 @@
     "assets/js/analytics.js",
     "assets/js/Пустой документ",
     "_data/analytics.json",
-    "_data/Пустой документ",
-    "_site/scripts/2025-06-24-script/index.html",
-    "_site/scripts/2025-06-24-script",
-    "_posts/2025-06-24-Welcome-to-Linux-Mative.md",
-    "_scripts/2025-06-24-Script.md",
     "drafts/2020-02-26-flake-it-till-you-make-it.md",
     "drafts/2020-02-28-test-markdown.md",
     "aboutme.md",
-    "_posts/2025-06-24-Two-Ways-to-Start-with-Linux-Mative.md",
     "Без названия.md",
     "umini.md",
     "_posts/Welcome to Linux Mative.md",

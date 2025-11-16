@@ -21,9 +21,7 @@ author: Maksym Titenko
 
 navbar-links:
   Home: "/"  
-  Download:
-    - uMini: "umini"
-    - uStandard: "ustandard"
+  Download: "/download" 
   Resources:
     - Privacy Policy: "privacy-policy"
     - Terms of Service: "terms-of-service"

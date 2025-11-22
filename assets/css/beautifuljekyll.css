@@ -1311,7 +1311,7 @@ a.btn.btn--primary:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
     padding: 0;
   }
 

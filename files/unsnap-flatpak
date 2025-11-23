@@ -1,0 +1,146 @@
+#!/bin/bash
+
+# ==========================================
+# AUTOMATED SYSTEM SETUP SCRIPT
+# ==========================================
+
+# --- 1. SNAP REMOVAL BLOCK ---
+echo "--------------------------------------------------"
+echo "STEP 1: Starting Snap removal process..."
+echo "--------------------------------------------------"
+
+# Detect and remove all installed snap packages
+if command -v snap &> /dev/null; then
+    echo "Snap detected. Removing packages..."
+    # Loop to handle dependencies (e.g. remove apps before 'core')
+    while [ "$(snap list 2>/dev/null | wc -l)" -gt 1 ]; do
+        for snap_pkg in $(snap list | awk 'NR>1 {print $1}'); do
+            echo "Removing $snap_pkg..."
+            sudo snap remove "$snap_pkg" 2>/dev/null
+        done
+    done
+else
+    echo "Snap command not found, skipping package removal."
+fi
+
+# Stop and disable snapd services
+echo "Stopping snapd services..."
+sudo systemctl stop snapd.service 2>/dev/null
+sudo systemctl stop snapd.socket 2>/dev/null
+sudo systemctl stop snapd.seeded.service 2>/dev/null
+
+# Purge snapd package
+echo "Purging snapd from the system..."
+sudo apt-get autoremove --purge -y snapd gnome-software-plugin-snap
+
+# Clear residual files and folders
+echo "Cleaning up residual files and logs..."
+rm -rf ~/snap
+sudo rm -rf /snap
+sudo rm -rf /var/snap
+sudo rm -rf /var/lib/snapd
+sudo rm -rf /var/cache/snapd
+sudo rm -rf /usr/lib/snapd
+
+# Prevent recreation of the snap folder in user home
+echo "no_snap_folder" | sudo tee /etc/profile.d/no_snap.sh > /dev/null
+
+echo "Snap removal complete."
+
+
+# --- 2. FIREFOX INSTALLATION BLOCK ---
+echo "--------------------------------------------------"
+echo "STEP 2: Installing Firefox from Mozilla Repo..."
+echo "--------------------------------------------------"
+
+# Create keyrings dir
+sudo install -d -m 0755 /etc/apt/keyrings
+
+# Import Mozilla key
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+
+# Verify fingerprint
+gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches.\n"; else print "\nVerification failed.\n"}'
+
+# Add Mozilla repo
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+
+# Prioritize Mozilla repo
+echo '
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+' | sudo tee /etc/apt/preferences.d/mozilla
+
+# Block Firefox snap version
+echo 'Package: firefox*
+Pin: release o=Ubuntu*
+Pin-Priority: -1' | sudo tee /etc/apt/preferences.d/firefox-no-snap
+
+# Block snapd re-installation
+echo 'Package: snapd
+Pin: release a=*
+Pin-Priority: -1' | sudo tee /etc/apt/preferences.d/nosnap.pref
+
+# Update and install Firefox
+sudo apt-get update && sudo apt-get install -y firefox
+
+
+# --- 3. FLATPAK SETUP & INTEGRATION BLOCK ---
+echo "--------------------------------------------------"
+echo "STEP 3: Setting up Flatpak with seamless integration..."
+echo "--------------------------------------------------"
+
+# Install Flatpak components
+sudo apt-get install -y flatpak gnome-software-plugin-flatpak gnome-software
+
+# Add Flathub repository
+echo "Adding Flathub repository..."
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Apply styling fixes (Access to themes/icons/fonts)
+echo "Applying styling fixes for seamless integration..."
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --filesystem=$HOME/.icons
+sudo flatpak override --filesystem=/usr/share/themes
+sudo flatpak override --filesystem=/usr/share/icons
+sudo flatpak override --filesystem=$HOME/.local/share/fonts
+sudo flatpak override --filesystem=$HOME/.fonts
+
+
+# --- 4. FLATPAK AUTO-UPDATE SERVICE ---
+echo "--------------------------------------------------"
+echo "STEP 4: Creating auto-update service for Flatpak..."
+echo "--------------------------------------------------"
+
+# Define the service file path
+SERVICE_FILE="/etc/systemd/system/flatpak-auto-update.service"
+
+# Create the service file content
+# We use 'After=network-online.target' to ensure internet is available before running.
+echo "Creating systemd service at $SERVICE_FILE..."
+sudo bash -c "cat > $SERVICE_FILE" <<EOF
+[Unit]
+Description=Flatpak Automatic Update at Boot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak update -y
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd to see the new service, enable it to run at boot
+sudo systemctl daemon-reload
+sudo systemctl enable flatpak-auto-update.service
+
+echo "Auto-update service created and enabled."
+
+echo "--------------------------------------------------"
+echo "ALL TASKS COMPLETED."
+echo "Please REBOOT your system to apply all changes correctly."
+echo "--------------------------------------------------"

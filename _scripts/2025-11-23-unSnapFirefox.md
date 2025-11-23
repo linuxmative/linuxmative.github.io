@@ -10,8 +10,6 @@ tags:
   - linuxmative
 ---
 
-# How to Replace Snap Firefox with the Native Mozilla Build on Ubuntu (Automated Script)
-
 If you are an Ubuntu user, you might have noticed that Firefox comes installed as a Snap package by default. while functional, the Snap version can sometimes suffer from slow startup times and integration issues with system themes or extensions.
 
 Many users prefer the classic, native `.deb` version directly from Mozilla. However, switching isn't as simple as `apt install firefox` because Ubuntu creates a wrapper that redirects you back to Snap.

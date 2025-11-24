@@ -1287,11 +1287,12 @@ a.btn.btn--primary:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
     padding: 0;
   }
 
   .features-list li {
+    text-align: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 1rem;

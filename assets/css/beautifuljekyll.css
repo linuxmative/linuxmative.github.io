@@ -1287,7 +1287,7 @@ a.btn.btn--primary:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
-    margin: 2rem 2rem;
+    margin: 2rem 0;
     padding: 0;
   }
 
@@ -1312,7 +1312,7 @@ a.btn.btn--primary:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
-    margin: 2rem 2rem;
+    margin: 2rem 0;
     padding: 0;
   }
 
